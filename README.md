@@ -6,7 +6,7 @@
 
 > Instant, production-ready REST APIs directly from your relational database.
 
-Fusio Grid turns an existing relational database (MySQL / MariaDB, PostgreSQL or SQLite) into a secure REST API with a
+Fusio Grid turns an existing relational database (MySQL / MariaDB, PostgreSQL) into a secure REST API with a
 single command, similar to tools like [PostgREST](https://postgrest.org/). It reads the database schema and creates
 schemas, actions and CRUD operations for every table. Because everything is generated as regular
 [Fusio](https://github.com/apioo/fusio) entities, you can edit the result in the Fusio backend and you get all Fusio
@@ -87,7 +87,7 @@ At runtime a request like `GET /inventory/items` is routed by Fusio to the gener
 
 * PHP >= 8.4 with the PDO extension for your database (`pdo_mysql`, `pdo_pgsql`)
 * [Composer](https://getcomposer.org/)
-* A database for Fusio itself (MySQL / MariaDB, PostgreSQL or SQLite)
+* A database for Fusio itself (MySQL / MariaDB, PostgreSQL)
 * The target database you want to expose, containing at least one table
 
 ## Installation
@@ -281,8 +281,8 @@ php bin/fusio grid:setup [name] [options]
 | `-H`, `--host`     | Database host (interactive default `127.0.0.1`)                           |
 | `-P`, `--port`     | Database port                                                             |
 | `-D`, `--dbname`   | Database name                                                             |
-| `-u`, `--user`     | Database user (not used for SQLite)                                       |
-| `-p`, `--password` | Database password (not used for SQLite)                                   |
+| `-u`, `--user`     | Database user                                                             |
+| `-p`, `--password` | Database password                                                         |
 | `-t`, `--prefix`   | Only include tables starting with this prefix, the prefix is removed from the path |
 | `-n`, `--no-interaction` | Run without prompts, required for CI/CD                             |
 
